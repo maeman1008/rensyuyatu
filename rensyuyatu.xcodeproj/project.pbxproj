@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03DE43D3A9DC9132A9C0CE25 /* Pods_rensyuyatu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6708671802E0BA5E20F3D2F8 /* Pods_rensyuyatu.framework */; };
 		43A760561C8DCB5B00EB8015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A760551C8DCB5B00EB8015 /* AppDelegate.swift */; };
 		43A760581C8DCB5B00EB8015 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A760571C8DCB5B00EB8015 /* ViewController.swift */; };
 		43A7605B1C8DCB5B00EB8015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A760591C8DCB5B00EB8015 /* Main.storyboard */; };
@@ -47,6 +48,9 @@
 		43A760711C8DCB5B00EB8015 /* rensyuyatuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rensyuyatuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A760751C8DCB5B00EB8015 /* rensyuyatuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rensyuyatuUITests.swift; sourceTree = "<group>"; };
 		43A760771C8DCB5B00EB8015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6708671802E0BA5E20F3D2F8 /* Pods_rensyuyatu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rensyuyatu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7260DBBEFDE14E4D917C7CAD /* Pods-rensyuyatu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rensyuyatu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rensyuyatu/Pods-rensyuyatu.debug.xcconfig"; sourceTree = "<group>"; };
+		CFD78162DB2D3073A9B0C786 /* Pods-rensyuyatu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rensyuyatu.release.xcconfig"; path = "Pods/Target Support Files/Pods-rensyuyatu/Pods-rensyuyatu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DE43D3A9DC9132A9C0CE25 /* Pods_rensyuyatu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003B81D45EABFEAA25971D89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6708671802E0BA5E20F3D2F8 /* Pods_rensyuyatu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EFB1EE262A1A83B3F9F8261 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7260DBBEFDE14E4D917C7CAD /* Pods-rensyuyatu.debug.xcconfig */,
+				CFD78162DB2D3073A9B0C786 /* Pods-rensyuyatu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		43A760491C8DCB5B00EB8015 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				43A760691C8DCB5B00EB8015 /* rensyuyatuTests */,
 				43A760741C8DCB5B00EB8015 /* rensyuyatuUITests */,
 				43A760531C8DCB5B00EB8015 /* Products */,
+				3EFB1EE262A1A83B3F9F8261 /* Pods */,
+				003B81D45EABFEAA25971D89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43A7607A1C8DCB5B00EB8015 /* Build configuration list for PBXNativeTarget "rensyuyatu" */;
 			buildPhases = (
+				72C38921D4558A6BD8A3F69D /* Check Pods Manifest.lock */,
 				43A7604E1C8DCB5B00EB8015 /* Sources */,
 				43A7604F1C8DCB5B00EB8015 /* Frameworks */,
 				43A760501C8DCB5B00EB8015 /* Resources */,
+				E4EA5E0A8D96B5D9C805A8B8 /* Embed Pods Frameworks */,
+				E5CD87561B8E82DB8672DB7E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72C38921D4558A6BD8A3F69D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4EA5E0A8D96B5D9C805A8B8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rensyuyatu/Pods-rensyuyatu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CD87561B8E82DB8672DB7E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rensyuyatu/Pods-rensyuyatu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43A7604E1C8DCB5B00EB8015 /* Sources */ = {
@@ -395,6 +470,7 @@
 		};
 		43A7607B1C8DCB5B00EB8015 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7260DBBEFDE14E4D917C7CAD /* Pods-rensyuyatu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = rensyuyatu/Info.plist;
@@ -406,6 +482,7 @@
 		};
 		43A7607C1C8DCB5B00EB8015 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD78162DB2D3073A9B0C786 /* Pods-rensyuyatu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = rensyuyatu/Info.plist;
@@ -482,6 +559,7 @@
 				43A7607C1C8DCB5B00EB8015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43A7607D1C8DCB5B00EB8015 /* Build configuration list for PBXNativeTarget "rensyuyatuTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +568,7 @@
 				43A7607F1C8DCB5B00EB8015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43A760801C8DCB5B00EB8015 /* Build configuration list for PBXNativeTarget "rensyuyatuUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +577,7 @@
 				43A760821C8DCB5B00EB8015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
