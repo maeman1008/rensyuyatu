@@ -15,6 +15,8 @@
 		43A760601C8DCB5B00EB8015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A7605E1C8DCB5B00EB8015 /* LaunchScreen.storyboard */; };
 		43A7606B1C8DCB5B00EB8015 /* rensyuyatuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7606A1C8DCB5B00EB8015 /* rensyuyatuTests.swift */; };
 		43A760761C8DCB5B00EB8015 /* rensyuyatuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A760751C8DCB5B00EB8015 /* rensyuyatuUITests.swift */; };
+		43C8D9B71C8DD751009CA2E3 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8D9B61C8DD751009CA2E3 /* ApiClient.swift */; };
+		43C8D9BA1C8DDAFC009CA2E3 /* RxAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8D9B91C8DDAFC009CA2E3 /* RxAlamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		43A760711C8DCB5B00EB8015 /* rensyuyatuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rensyuyatuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A760751C8DCB5B00EB8015 /* rensyuyatuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rensyuyatuUITests.swift; sourceTree = "<group>"; };
 		43A760771C8DCB5B00EB8015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C8D9B61C8DD751009CA2E3 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		43C8D9B91C8DDAFC009CA2E3 /* RxAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxAlamofire.swift; sourceTree = "<group>"; };
 		6708671802E0BA5E20F3D2F8 /* Pods_rensyuyatu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rensyuyatu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7260DBBEFDE14E4D917C7CAD /* Pods-rensyuyatu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rensyuyatu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rensyuyatu/Pods-rensyuyatu.debug.xcconfig"; sourceTree = "<group>"; };
 		CFD78162DB2D3073A9B0C786 /* Pods-rensyuyatu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rensyuyatu.release.xcconfig"; path = "Pods/Target Support Files/Pods-rensyuyatu/Pods-rensyuyatu.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				43A7605C1C8DCB5B00EB8015 /* Assets.xcassets */,
 				43A7605E1C8DCB5B00EB8015 /* LaunchScreen.storyboard */,
 				43A760611C8DCB5B00EB8015 /* Info.plist */,
+				43C8D9B61C8DD751009CA2E3 /* ApiClient.swift */,
+				43C8D9B91C8DDAFC009CA2E3 /* RxAlamofire.swift */,
 			);
 			path = rensyuyatu;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 				43A760501C8DCB5B00EB8015 /* Resources */,
 				E4EA5E0A8D96B5D9C805A8B8 /* Embed Pods Frameworks */,
 				E5CD87561B8E82DB8672DB7E /* Copy Pods Resources */,
+				43C8D9B81C8DD7D7009CA2E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,6 +286,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43C8D9B81C8DD7D7009CA2E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		72C38921D4558A6BD8A3F69D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +353,8 @@
 			files = (
 				43A760581C8DCB5B00EB8015 /* ViewController.swift in Sources */,
 				43A760561C8DCB5B00EB8015 /* AppDelegate.swift in Sources */,
+				43C8D9BA1C8DDAFC009CA2E3 /* RxAlamofire.swift in Sources */,
+				43C8D9B71C8DD751009CA2E3 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
